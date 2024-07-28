@@ -201,16 +201,127 @@ h3 {
     color: #999;
   }
 
-  .nft-content {
-    display: flex;
-    gap: 20px;
+  .nft-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
   }
   
-  .nft-image {
-    max-width: 50%;
-    height: auto;
+  .nft-info-grid p {
+    margin: 0;
   }
   
-  .nft-details {
-    flex: 1;
+  .play-game-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
   }
+  
+  .play-game-link:hover {
+    background-color: #45a049;
+  }
+
+  .nft-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nft-info-grid p {
+  margin: 0;
+}
+
+.play-game-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.play-game-link:hover {
+  background-color: #45a049;
+}
+
+
+.user-profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nft-display {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nft-content {
+  display: flex;
+  align-items: stretch;
+}
+
+.nft-image-container {
+  flex: 0 0 40%;
+  margin-right: 20px;
+}
+
+.nft-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nft-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nft-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nft-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.nft-info-grid p {
+  margin: 0;
+}
+
+.play-game-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.play-game-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.play-game-link:hover {
+  background-color: #45a049;
+}

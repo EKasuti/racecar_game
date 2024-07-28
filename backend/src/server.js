@@ -76,6 +76,7 @@ app.listen(port, () => {
   console.log('Available routes:');
   console.log('  GET  /');
   console.log('  POST /api/create-racing-cars-collection');
+  
 });
 
 process.on('unhandledRejection', (reason, promise) => {

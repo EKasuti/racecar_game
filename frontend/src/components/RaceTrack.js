@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Phaser from 'phaser';
 import PlayerCar from './PlayerCar';
+import playerCarImage from '../images/gold_nft.png';
+import botCarImage from '../images/silver.png';
 
 const RaceTrack = ({ account }) => {
     const gameRef = useRef(null);
@@ -40,7 +42,8 @@ const RaceTrack = ({ account }) => {
         let spaceKey;
 
         function preload() {
-            this.load.image('car', 'assets/car.png');
+            this.load.image('playerCar', playerCarImage);
+            this.load.image('botCar', botCarImage);
         }
 
         function create() {
@@ -100,7 +103,7 @@ const RaceTrack = ({ account }) => {
         const newPlayer = {
             id: newPlayerId,
             account: playerAccount,
-            x: startLineX + (isBot ? 40 : -40),
+            x: startLineX + 60 + (isBot ? 40 : 0), // Positioned on the right side of the starting line
             y: startLineY,
             isBot: isBot,
         };
@@ -114,7 +117,8 @@ const RaceTrack = ({ account }) => {
                 fieldHeight,
                 innerTrackWidth,
                 innerTrackHeight,
-            });
+            }, isBot ? 'botCar' : 'playerCar');
+            
             carsRef.current.push(car);
         }
     };

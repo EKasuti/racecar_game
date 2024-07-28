@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
-import { ethers } from 'ethers';
+import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
 
 const WalletConnection = ({ onConnectionChange }) => {
   const [account, setAccount] = useState(null);
 
-  const connectWallet = async () => {
-    if (typeof window.ethereum !== 'undefined') {
-      try {
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const address = await signer.getAddress();
+  const connectSubstrateWallet = async () => {
+    try {
+      const extensions = await web3Enable('My Substrate App');
+      if (extensions.length === 0) {
+        console.log('No extension found');
+        return;
+      }
+
+      const allAccounts = await web3Accounts();
+      if (allAccounts.length > 0) {
+        const address = allAccounts[0].address;
         setAccount(address);
         onConnectionChange(true, address);
-      } catch (error) {
-        console.error('Error connecting wallet:', error);
+      } else {
+        console.log('No accounts found');
       }
-    } else {
-      console.log('Please install MetaMask!');
+    } catch (error) {
+      console.error('Error connecting Substrate wallet:', error);
     }
   };
 
@@ -39,7 +43,7 @@ const WalletConnection = ({ onConnectionChange }) => {
         </div>
       ) : (
         <div>
-          <button onClick={connectWallet}>Connect Wallet</button>
+          <button onClick={connectSubstrateWallet}>Connect Substrate Wallet</button>
           <button onClick={joinWithoutWallet}>Join Without Wallet</button>
         </div>
       )}
