@@ -1,4 +1,4 @@
-import { connectSdk } from "./utils/connect-sdk.js";
+import { connectSdk } from "../src/utils/connect-sdk.js";
 
 const createCollection = async () => {
   const {account, sdk} = await connectSdk();

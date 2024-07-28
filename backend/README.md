@@ -35,13 +35,14 @@ Exciting achievements can be awarded as well, and these achievements are also NF
 ## 1. Create a Racing cars collection
 
 ```sh
-node ./src/1-collection-cars.js
+node ./backend/scripts/1-collection-cars.js
 ```
+- 3245
 
 ## 2. Create Achievements collection
 
 ```sh
-node ./src/2-collection-achievement.js
+node ./backend/scripts/2-collection-achievement.js
 ```
 
 ## 3. Create at least two car NFTs
@@ -54,8 +55,8 @@ Pass the following arguments to the function
 For example:
 
 ```sh
-node ./src/3-create-car.js 3204 0x6E349F6c8b117155CcAA1346D5D4BA95e7a82CC2 FastGuy
-node ./src/3-create-car.js 3204  5ELQMkio562jcSvQNQHZk5wa75UHPGuSKrezyjnS18cVJ6KB RaceQueen
+node ./backend/scripts/3-create-car.js 3237 0x6E349F6c8b117155CcAA1346D5D4BA95e7a82CC2 FastGuy
+node ./backend/scripts/3-create-car.js 3245 5ELQMkio562jcSvQNQHZk5wa75UHPGuSKrezyjnS18cVJ6KB RaceQueen
 ```
 
 ## 4. Play the game
@@ -67,5 +68,5 @@ Pass the following arguments to the function
 - Second player's tokenId
 
 ```sh
-node ./src/4-play.js 3132 3133 1 2
+node ./backend/scripts/4-play.js 3245 3245 1 2
 ```

@@ -1,8 +1,7 @@
-import { changeAttribute } from "./utils/change-attribute.js";
-import { connectSdk } from "./utils/connect-sdk.js";
-import { getRandomInt } from "./utils/random.js";
+import { changeAttribute } from "../src/utils/change-attribute.js";
+import { connectSdk } from "../src/utils/connect-sdk.js";
+import { getRandomInt } from "../src/utils/random.js";
 import { Address } from "@unique-nft/sdk/utils";
-
 
 const play = async () => {
   const args = process.argv.slice(2);
