@@ -26,6 +26,10 @@ const WalletConnection = ({ onConnectionChange }) => {
     onConnectionChange(false, null);
   };
 
+  const joinWithoutWallet = () => {
+    onConnectionChange(true, null);
+  };
+
   return (
     <div>
       {account ? (
@@ -34,7 +38,10 @@ const WalletConnection = ({ onConnectionChange }) => {
           <button onClick={disconnectWallet}>Disconnect</button>
         </div>
       ) : (
-        <button onClick={connectWallet}>Connect Wallet</button>
+        <div>
+          <button onClick={connectWallet}>Connect Wallet</button>
+          <button onClick={joinWithoutWallet}>Join Without Wallet</button>
+        </div>
       )}
     </div>
   );

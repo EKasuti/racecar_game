@@ -38,7 +38,7 @@ const LandingPage = () => {
         }}>
           <h1 style={{ marginBottom: '2rem', fontSize:'3rem' }}>Welcome to Daly</h1>
           <p style={{ marginBottom: '2rem', fontSize:'2rem'}}>Experience the thrill of racing in our cutting-edge game. Are you ready to take on the challenge?</p>
-          <Link to="/login" className="cta-button" style={{
+          <Link to="/game" className="cta-button" style={{
             padding: '0.75rem 1.5rem',
             backgroundColor: '#007bff',
             color: 'white',

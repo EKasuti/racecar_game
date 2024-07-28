@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@polkadot/util": "^13.0.2",
     "@polkadot/api": "^12.2.2",
     "@polkadot/keyring": "^13.0.2",
     "@unique-nft/accounts": "^0.3.7",

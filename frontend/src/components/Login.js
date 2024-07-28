@@ -26,7 +26,7 @@ function Login() {
       // Step 1: Create Racing Cars Collection
       setStatus('Creating Racing Cars Collection...');
       console.log('Sending request to create racing cars collection');
-      const racingCarsResponse = await axios.post(`http://localhost:3001/create-racing-cars-collection`, { address });
+      const racingCarsResponse = await axios.post(`${API_URL}/api/create-racing-cars-collection`, { address });
       console.log('Racing cars collection response:', racingCarsResponse.data);
       
       if (!racingCarsResponse.data.success) {

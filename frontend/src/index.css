@@ -200,3 +200,17 @@ h3 {
     font-style: italic;
     color: #999;
   }
+
+  .nft-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nft-image {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .nft-details {
+    flex: 1;
+  }
