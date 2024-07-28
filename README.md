@@ -54,3 +54,7 @@ If you encounter the error "Cannot read properties of undefined (reading 'split'
 
 
 ## Video [link](https://drive.google.com/file/d/1lQ34SgmKi7UalbDliZZq2IEAMMBFvW-X/view?usp=sharing)
+
+![Race Car Game](images/image_3.png)
+![Race Car Game](images/image_1.png)
+![Race Car Game](images/image_2.png)
