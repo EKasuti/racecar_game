@@ -51,3 +51,6 @@ This will run the `src/server.js` file.
 ## Troubleshooting
 
 If you encounter the error "Cannot read properties of undefined (reading 'split')", ensure that your `.env` file is set up correctly and that the `MNEMONIC_PHRASE` is properly defined.
+
+
+## Video [link](https://drive.google.com/file/d/1lQ34SgmKi7UalbDliZZq2IEAMMBFvW-X/view?usp=sharing)
